@@ -15,3 +15,5 @@ I am interested in exploring data related to...
 
 
 The 2024 US election. More specifically, the 2024 senator race in Wisconsin Between Republican Eric Hovde and Democratic incumbent Tammy Baldwin (if enough information regarding the data behind the two races is avalible at the time of beginning this project).
+
+is this working? I fear this is not working. I'm stressed. 
