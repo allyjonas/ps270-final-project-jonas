@@ -13,10 +13,10 @@ Does the type of content US adults view on social media impact their political i
 With the growing amount of adults in the United States who use and consume important information from social media, I think that those who prefer informative or political content on social media will lean more Democratic, and those who prefer memes and more humorous content will lean more Republican. I feel this way because on average, Democrat voter have more extensive educational background than Republicans, which leads me to believe they would seek out education content on a more frequent basis. These results were measured through survey data posted to Kabble under the name Social Media Political Content Analysis Dataset. 
 
 ## Explanation:
-I will be examining adults over 18, their political affiliations (Liberal, Conservative, or Independent), their preferred content on social media (New articles, opinion pieces, memes), and the frequency at which they use social media. Once again, all of this information was gathered from survey data posted on Kabble. 
+I will be examining adults over 18, their political affiliations (Liberal, Conservative, or Independent), their preferred content on social media (New articles, opinion pieces, memes), and the frequency at which they use social media. Once again, all of this information was gathered from survey data posted on Kabble under the name Social Media Political Content Analysis Dataset. 
 
 ## Outcome Variable:
-My outcome variable is the party ideologies of those who prefer news articles, opinion pieces, and memes on social media. This variable, like my others, was measured through survey data posted to Kabble.
+My outcome variable is the party ideologies of those who prefer news articles, opinion pieces, and memes on social media. This variable, like my others, was measured through survey data posted to Kabble under the name Social Media Political Content Analysis Dataset.
 
 ## Patterns:
 A pattern that would support my hypothesis is that the majority of people with a degree beyond a bachlors (masters and PhD) are reportedly Liberal. A pattern that may harm my hypothesis is that most people Liberals say the news they’re seeing on social media isn’t very accurate, which would lead me to assume it did not impact their political beliefs. 
