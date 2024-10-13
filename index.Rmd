@@ -10,7 +10,7 @@ output:
 Does the type of content US adults view on social media impact their political ideologies?
 
 ## Hypothesis:
-With the growing amount of adults in the United States who use and consume important information from social media, I think that those who prefer informative or political content on social media will lean more Democratic, and those who prefer memes and more humorous content will lean more Republican. I feel this way because on average, Democrat voter have more extensive educational background than Republicans, which leads me to believe they would seek out education content on a more frequent basis. These results were measured through survey data posted to Kabble. 
+With the growing amount of adults in the United States who use and consume important information from social media, I think that those who prefer informative or political content on social media will lean more Democratic, and those who prefer memes and more humorous content will lean more Republican. I feel this way because on average, Democrat voter have more extensive educational background than Republicans, which leads me to believe they would seek out education content on a more frequent basis. These results were measured through survey data posted to Kabble under the name Social Media Political Content Analysis Dataset. 
 
 ## Explanation:
 I will be examining adults over 18, their political affiliations (Liberal, Conservative, or Independent), their preferred content on social media (New articles, opinion pieces, memes), and the frequency at which they use social media. Once again, all of this information was gathered from survey data posted on Kabble. 
