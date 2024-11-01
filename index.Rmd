@@ -21,6 +21,15 @@ My outcome variable is the party ideologies of those who prefer news articles, o
 ## Patterns:
 A pattern that would support my hypothesis is that the majority of people with a degree beyond a bachlors (masters and PhD) are reportedly Liberal. A pattern that may harm my hypothesis is that most people Liberals say the news they’re seeing on social media isn’t very accurate, which would lead me to assume it did not impact their political beliefs. 
 
+```{r}
+library(tidyverse)
+media_poli_ideology <- read_csv("/users/allyjonas/downloads/SOCIAL MEDIA IMPACT/social_media_political_content_test_data.csv")
+media_poli_ideology
+```
 
 
+# Download latest version
+path = kagglehub.dataset_download("fysalhameed/impact-of-social-media-on-political-consent")
+
+print("Path to dataset files:", path)
 
