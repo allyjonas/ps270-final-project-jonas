@@ -27,9 +27,3 @@ media_poli_ideology <- read_csv("/users/allyjonas/downloads/SOCIAL MEDIA IMPACT/
 media_poli_ideology
 ```
 
-
-# Download latest version
-path = kagglehub.dataset_download("fysalhameed/impact-of-social-media-on-political-consent")
-
-print("Path to dataset files:", path)
-

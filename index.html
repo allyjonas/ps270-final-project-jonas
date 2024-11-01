@@ -1553,7 +1553,34 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>My outcome variable is the party ideologies of those who prefer news articles, opinion pieces, and memes on social media. This variable, like my others, was measured through survey data posted to Kabble under the name Social Media Political Content Analysis Dataset.</p>
 <h2 id="patterns">Patterns:</h2>
 <p>A pattern that would support my hypothesis is that the majority of people with a degree beyond a bachlors (masters and PhD) are reportedly Liberal. A pattern that may harm my hypothesis is that most people Liberals say the news they’re seeing on social media isn’t very accurate, which would lead me to assume it did not impact their political beliefs.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span><span class='va'>media_poli_ideology</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"/users/allyjonas/downloads/SOCIAL MEDIA IMPACT/social_media_political_content_test_data.csv"</span><span class='op'>)</span></span>
+<span><span class='va'>media_poli_ideology</span></span></code></pre>
+</div>
+<pre><code># A tibble: 2,800 × 23
+     Age Gender    `Education Level` Occupation Political Affiliatio…¹
+   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;             &lt;chr&gt;      &lt;chr&gt;                 
+ 1    62 Non-bina… Master&#39;s          Employed   Liberal               
+ 2    62 Non-bina… PhD               Unemployed Conservative          
+ 3    33 Male      PhD               Employed   Independent           
+ 4    70 Non-bina… PhD               Unemployed Liberal               
+ 5    18 Non-bina… Bachelor&#39;s        Employed   Independent           
+ 6    46 Female    Master&#39;s          Employed   Independent           
+ 7    55 Non-bina… Bachelor&#39;s        Employed   Liberal               
+ 8    71 Male      PhD               Unemployed Independent           
+ 9    65 Non-bina… Master&#39;s          Student    Independent           
+10    66 Male      PhD               Student    Conservative          
+# ℹ 2,790 more rows
+# ℹ abbreviated name: ¹​`Political Affiliation`
+# ℹ 18 more variables: `Geographic Location` &lt;chr&gt;,
+#   `Social Media Usage Frequency` &lt;chr&gt;,
+#   `Preferred Social Media` &lt;chr&gt;,
+#   `Political Content Exposure` &lt;chr&gt;,
+#   `Types of Political Content` &lt;chr&gt;, …</code></pre>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
