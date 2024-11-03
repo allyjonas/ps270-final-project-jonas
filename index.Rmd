@@ -26,4 +26,21 @@ library(tidyverse)
 media_poli_ideology <- read_csv("/users/allyjonas/downloads/SOCIAL MEDIA IMPACT/social_media_political_content_test_data.csv")
 media_poli_ideology
 ```
+```{r}
+names(media_poli_ideology)
+```
+```{r}
+ggplot(media_poli_ideology, aes(
+  x = `Political Affiliation`,
+  fill = `Political Affiliation`
+)) + geom_bar() + facet_wrap(~ `Preferred Social Media`, scales = "free_y") +
+  labs(
+    title = "Political Ideology by Preferred Social Network",
+    x = "Preferred Social Network",
+    y = "Count",
+    fill = "Poltical Affiliation") + theme(
+      axis.text = element_text(size = 3),
+      plot.title = element_text(size = 10),
+      axis.title = element_text(size = 7))
+```
 
