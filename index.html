@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["Final-Project-Milestone-2.html","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.28/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["Final-Project-Milestone-2.html","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/figure-html5/unnamed-chunk-4-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.28/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1497,7 +1497,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="index_files/header-attrs-2.28/header-attrs.js"></script>
+  <script src="index_files/header-attrs-2.29/header-attrs.js"></script>
   <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="index_files/popper-2.6.0/popper.min.js"></script>
   <link href="index_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1556,8 +1556,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
-<span><span class='va'>media_poli_ideology</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"/users/allyjonas/downloads/SOCIAL MEDIA IMPACT/social_media_political_content_test_data.csv"</span><span class='op'>)</span></span>
-<span><span class='va'>media_poli_ideology</span></span></code></pre>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span></span>
+<span><span class='va'>media_poli_ideology</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"/users/allyjonas/downloads/SOCIAL MEDIA IMPACT/social_media_political_content_test_data.csv"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>media_poli_ideology</span></span></code></pre>
 </div>
 <pre><code># A tibble: 2,800 × 23
      Age Gender    `Education Level` Occupation Political Affiliatio…¹
@@ -1579,8 +1584,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 #   `Preferred Social Media` &lt;chr&gt;,
 #   `Political Content Exposure` &lt;chr&gt;,
 #   `Types of Political Content` &lt;chr&gt;, …</code></pre>
-</div>
-<div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>media_poli_ideology</span><span class='op'>)</span></span></code></pre>
 </div>
@@ -1597,6 +1600,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 [21] &quot;Overall Quality of Discourse&quot; &quot;Views on Influence&quot;          
 [23] &quot;Suggestions for Improvement&quot; </code></pre>
 </div>
+<h2 id="poltitical-ideology-by-preferred-social-network-bar-chart">Poltitical Ideology by Preferred Social Network Bar Chart</h2>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>media_poli_ideology</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span></span>
@@ -1614,6 +1618,38 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <p><img src="index_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
 </div>
+<h2 id="recency-of-political-content-exposure-by-political-affiliation">Recency of Political Content Exposure by Political Affiliation</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>media_poli_ideology</span> <span class='op'>&lt;-</span> <span class='va'>media_poli_ideology</span> <span class='op'>|&gt;</span></span>
+<span>   <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>`Recency of Exposure` <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/case_when.html'>case_when</a></span><span class='op'>(</span></span>
+<span>    <span class='va'>`Recency of Exposure`</span> <span class='op'>==</span> <span class='st'>"Within the last hour"</span> <span class='op'>~</span> <span class='fl'>1</span>,</span>
+<span>    <span class='va'>`Recency of Exposure`</span> <span class='op'>==</span> <span class='st'>"Within the last 24 hours"</span> <span class='op'>~</span> <span class='fl'>2</span>,</span>
+<span>    <span class='va'>`Recency of Exposure`</span> <span class='op'>==</span> <span class='st'>"Within the last week"</span> <span class='op'>~</span> <span class='fl'>3</span>,</span>
+<span>    <span class='va'>`Recency of Exposure`</span> <span class='op'>==</span> <span class='st'>"Longer than a week ago"</span> <span class='op'>~</span> <span class='fl'>4</span>,</span>
+<span>    <span class='cn'>TRUE</span> <span class='op'>~</span> <span class='cn'>NA_real_</span> <span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>line_data</span> <span class='op'>&lt;-</span> <span class='va'>media_poli_ideology</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>`Political Affiliation`</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>mean_recency <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>`Recency of Exposure`</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>, .groups <span class='op'>=</span> <span class='st'>"drop"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>recent_poli_content</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>line_data</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span></span>
+<span>    x <span class='op'>=</span> <span class='va'>`Political Affiliation`</span>, </span>
+<span>    y <span class='op'>=</span> <span class='va'>mean_recency</span>, </span>
+<span>    group <span class='op'>=</span> <span class='fl'>1</span>, </span>
+<span>    color <span class='op'>=</span> <span class='va'>`Political Affiliation`</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>1.2</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span> <span class='op'>+</span>  </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
+<span>    title <span class='op'>=</span> <span class='st'>"Average Recency of Political Content Exposure by Political Affiliation"</span>,</span>
+<span>    x <span class='op'>=</span> <span class='st'>"Political Affiliation"</span>,</span>
+<span>    y <span class='op'>=</span> <span class='st'>"Average Recency of Exposure"</span></span>
+<span>  <span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span><span class='op'>)</span></span>
+<span><span class='va'>recent_poli_content</span></span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
+</div>
+<p>This lineplot dipicts the recency of political content exposure on average by political party. If people had engaged with political content within the hour they were given a 1, within the past 24 hours a 2, within the past week a 3 and longer than a week ago a 4. Conservatives had the highest average with a 2.52, with independents at 2.47 and liberals leading by a small margin at 2.46. People who identify as liberal are more likely to have viewed political content more recently than people who identify as both independent or conservatives. Furthermore, conservatives were the least likely to have viewed political content recently. These findings highlight the differences in media consumption patterns between political groups, and their potential implications on party affiliation.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

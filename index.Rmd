@@ -23,12 +23,16 @@ A pattern that would support my hypothesis is that the majority of people with a
 
 ```{r}
 library(tidyverse)
+library(dplyr)
 media_poli_ideology <- read_csv("/users/allyjonas/downloads/SOCIAL MEDIA IMPACT/social_media_political_content_test_data.csv")
-media_poli_ideology
 ```
+
+
 ```{r}
+media_poli_ideology
 names(media_poli_ideology)
 ```
+## Poltitical Ideology by Preferred Social Network Bar Chart
 ```{r}
 ggplot(media_poli_ideology, aes(
   x = `Political Affiliation`,
@@ -43,4 +47,34 @@ ggplot(media_poli_ideology, aes(
       plot.title = element_text(size = 10),
       axis.title = element_text(size = 7))
 ```
+## Recency of Political Content Exposure by Political Affiliation
 
+```{r}
+media_poli_ideology <- media_poli_ideology |>
+   mutate(`Recency of Exposure` = case_when(
+    `Recency of Exposure` == "Within the last hour" ~ 1,
+    `Recency of Exposure` == "Within the last 24 hours" ~ 2,
+    `Recency of Exposure` == "Within the last week" ~ 3,
+    `Recency of Exposure` == "Longer than a week ago" ~ 4,
+    TRUE ~ NA_real_ ))
+
+line_data <- media_poli_ideology |>
+  group_by(`Political Affiliation`) |>
+  summarize(mean_recency = mean(`Recency of Exposure`, na.rm = TRUE), .groups = "drop")
+
+recent_poli_content <- ggplot(line_data, aes(
+    x = `Political Affiliation`, 
+    y = mean_recency, 
+    group = 1, 
+    color = `Political Affiliation`)) +
+  geom_line(size = 1.2) + geom_point(size = 3) +  
+  labs(
+    title = "Average Recency of Political Content Exposure by Political Affiliation",
+    x = "Political Affiliation",
+    y = "Average Recency of Exposure"
+  ) +
+  theme_minimal()
+recent_poli_content
+```
+
+This lineplot dipicts the recency of political content exposure on average by political party. If people had engaged with political content within the hour they were given a 1, within the past 24 hours a 2, within the past week a 3 and longer than a week ago a 4. Conservatives had the highest average with a 2.52, with independents at 2.47 and liberals leading by a small margin at 2.46. People who identify as liberal are more likely to have viewed political content more recently than people who identify as both independent or conservatives. Furthermore, conservatives were the least likely to have viewed political content recently. These findings highlight the differences in media consumption patterns between political groups, and their potential implications on party affiliation. 
