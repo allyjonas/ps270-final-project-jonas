@@ -10,13 +10,13 @@ output:
 Does the type of content US adults view on social media impact their political ideologies?
 
 ## Hypothesis:
-With the growing amount of adults in the United States who use and consume important information from social media, I think that those who prefer informative or political content on social media will lean more Democratic, and those who prefer memes and more humorous content will lean more Republican. I feel this way because on average, Democrat voter have more extensive educational background than Republicans, which leads me to believe they would seek out education content on a more frequent basis. These results were measured through survey data posted to Kabble under the name Social Media Political Content Analysis Dataset. 
+With the growing amount of adults in the United States who use and consume important information from social media, I think that those who prefer informative or political content on social media will lean more Democratic, and those who prefer memes and more humorous content will lean more Republican. I feel this way because on average, Democrat voter have more extensive educational background than Republicans, which leads me to believe they would seek out education content on a more frequent basis. These results were measured through survey data posted to Kaggle under the name Social Media Political Content Analysis Dataset. 
 
 ## Explanation:
-I will be examining adults over 18, their political affiliations (Liberal, Conservative, or Independent), their preferred content on social media (New articles, opinion pieces, memes), and the frequency at which they use social media. Once again, all of this information was gathered from survey data posted on Kabble under the name Social Media Political Content Analysis Dataset. 
+I will be examining adults over 18, their political affiliations (Liberal, Conservative, or Independent), their preferred content on social media (New articles, opinion pieces, memes), there levels of trust in social media content (trust a lot, trust somewhat, do not trust), the frequency at which they interact with political content on social media, and the frequency at which they use social media. Once again, all of this information was gathered from survey data posted on Kaggle under the name Social Media Political Content Analysis Dataset. 
 
 ## Outcome Variable:
-My outcome variable is the party ideologies of those who prefer news articles, opinion pieces, and memes on social media. This variable, like my others, was measured through survey data posted to Kabble under the name Social Media Political Content Analysis Dataset.
+My outcome variable is the party ideologies of those who prefer news articles, opinion pieces, and memes on social media. This variable, like my others, was measured through survey data posted to Kaggle under the name Social Media Political Content Analysis Dataset.
 
 ## Patterns:
 A pattern that would support my hypothesis is that the majority of people with a degree beyond a bachlors (masters and PhD) are reportedly Liberal. A pattern that may harm my hypothesis is that most people Liberals say the news they’re seeing on social media isn’t very accurate, which would lead me to assume it did not impact their political beliefs. 
@@ -78,3 +78,86 @@ recent_poli_content
 ```
 
 This line plot depicts the recency of political content exposure on average by political party. If people had engaged with political content within the hour they were given a 1, within the past 24 hours a 2, within the past week a 3 and longer than a week ago a 4. Conservatives had the highest average with a 2.52, with independents at 2.47 and liberals leading by a small margin at 2.46. People who identify as liberal are more likely to have viewed political content more recently than people who identify as both independent or conservatives. Furthermore, conservatives were the least likely to have viewed political content recently. These findings highlight the differences in media consumption patterns between political groups, and their potential implications on party affiliation. 
+# Introduction
+
+My research analyzes the impact of social media content on the political ideologies of adults in the United States. As a mass communications and political science double major, much of the work in my strategic communication classes involves analyzing and discussing the different ways we can target our messages to reach audiences within different political parties. In doing this research, I wanted to observe the statistical impact this communication actually has on wider audiences. My hypothesis is that those who prefer more informative political content (e.g. news articles, opinion pieces) will lean more left whereas those who prefer more humorous or entertainment based political content (e.g. memes) will lean more right. Additionally, I believe those who trust social media a lot or somewhat will lean left, and those who do not will lean more right. Finally, I believe those who are exposed to more political content and interact with it frequently on social media, but overall use social media less will be more left leaning, whereas those who are less exposed to and interact less frequently with the subject matter, but use social media more often will lean more right. 
+# Dataset
+
+My dataset comes from the website Kabble under the title, “Social Media Political Content Analysis Dataset.” My key dependent variable, political affiliation, comes from self-reported survey data. Additionally, my independent variables, content preference (measured by types of political content and political content topics), trust in social media (media by trust in social media), and frequency of interaction with political content (measured by social media usage frequency, political content exposure, and interactions frequency) were also measure through self-reported data on surveys.
+
+# Dependent Variable Summary Plot
+
+```{r}
+
+party_distrubution_plot <- ggplot(media_poli_ideology, aes(x = `Political Affiliation`)) +
+  geom_bar(fill = "#6B9272", color = "black") +
+  theme_minimal() +
+  labs(title = "Distribution of Political Affiliation",
+       x = "Political Affiliation",
+       y = "Count") +
+  theme(
+     plot.background = element_rect(fill = "#AD9381", color = NA),
+    plot.title = element_text(family = "Georgia", face = "bold", size = 14),
+    axis.title.x = element_text(family = "Georgia", face = "bold", size = 12),
+    axis.title.y = element_text(family = "Georgia", face = "bold", size = 12),
+    axis.text.x = element_text(family = "Helvetica", angle = 45, hjust = 1),
+    axis.text.y = element_text(family = "Helvetica"),
+      plot.subtitle = element_text(family = "Helvetica")
+  )
+party_distrubution_plot
+
+party_distrubution_table <- table(media_poli_ideology$`Political Affiliation`)
+
+knitr::kable(party_distrubution_table, caption = "Political Affiliation Table")
+```
+
+In this data set, there are 918 respondents who self-identify as conservative, 934 as independent, and 948 as liberal. These findings and this plot show that the categories in my dependent variable are spread approximately evenly, as none received an overly dominant amount of respondents. In turn, this makes my dependent variable well-suited for statistical testing. This plot is cross-sectional, as it visualizes respondents political affiliations at a singular point in time (whenever they took the survey).  
+
+# Results
+
+My primary areas of interest are how certain media consumption patterns are associated with and potentially impact political affiliation in the United States, United Kingdom, Canada, and Australia. With this, my primary relationships of interest are as follows
+
+## Political affiliation and social media content preferences
+
+```{r}
+content_type_topic_avg_table <- media_poli_ideology |>
+  group_by(`Political Affiliation`) |>
+  summarise(
+    avg_enviro_interest = mean(`Political Content Topics` == "Environment", na.rm = TRUE),
+    avg_healthcare_interest = mean(`Political Content Topics` == "Healthcare", na.rm = TRUE),
+    avg_immigration_interest = mean(`Political Content Topics` == "Immigration", na.rm = TRUE),
+    avg_economy_interest = mean(`Political Content Topics` == "Economy", na.rm = TRUE),
+    avg_opinion_pieces = mean(`Types of Political Content` == "Opinion pieces", na.rm = TRUE),
+    avg_memes = mean(`Types of Political Content` == "Memes", na.rm = TRUE),
+    avg_news_articles = mean(`Types of Political Content` == "News articles", na.rm = TRUE)
+  )
+  
+knitr::kable(content_type_topic_avg_table, caption = "Average Interest by Political Affiliation for Political Topics and Content Types")
+
+party_distrubution_plot <- ggplot(media_poli_ideology, aes(x = `Types of Political Content`, fill = `Political Affiliation`)) +
+  geom_bar(position = "dodge") +
+  facet_wrap(~`Political Content Topics`) + 
+  labs(
+    title = "Political Affiliation by Content Type and Political Topic",
+    x = "Type of Political Content",
+    y = "Count",
+    fill = "Political Affiliation"
+  ) +
+  theme_minimal() +
+  scale_fill_manual(values = c("Conservative" = "#A65E5E", "Liberal" = "#5E99A6", "Independent" = "#6A547B")) +
+  theme(
+     plot.background = element_rect(fill = "#AD9381", color = NA),
+    plot.title = element_text(face = "bold", size = 12, family = "Georgia"),
+    axis.title.x = element_text(size = 10, family = "Georgia"),
+    axis.title.y = element_text(size = 10, family = "Georgia"),
+    axis.text.x = element_text(size = 8, angle = 45, hjust = 1, family = "Helvetica"),
+    axis.text.y = element_text(size = 8), family = "Helvetica",
+strip.text = element_text(family = "Helvetica"), 
+legend.title = element_text(family = "Georgia"),
+legend.text = element_text(family = "Helvetica")
+)
+party_distrubution_plot
+```
+This plot shows the spread of political content topics respondents consume most, and their preferred type of content to consume these topics. Overall, liberals, conservatives, and independent prefer news articles over other types of political content. Despite this, conservatives' second most preferred content type was memes, and they preferred this genre more than the other two affiliations. Liberals were the most likely to prefer opinion pieces, as this was their second most preferred type of political content, with memes being the lowest. Finally, independents content consumption patterns reflect those of conservatives, albeit to a lesser extent. Their second most preferred type of political content was opinion pieces, with their least preferred being opinion pieces. 
+
+In terms of topics, all affiliations preferred content relating to immigration the most. Of the affiliations, conservatives were the most likely to preferred content relating to immigration however, while this number was more spread across other categories for liberals and independents. Liberals and conservatives also preferred environmental content the second most, with conservatives also preferring this category the most in comparison to the other affiliations. Independents preferred economic content the second most, and were the most likely to consume this type of content across all affiliations. Both liberals and conservatives were least likely to consume content relating to healthcare, whereas independents were least likely to consume content relating to the enviroment. 
