@@ -160,6 +160,11 @@ legend.title = element_text(family = "Georgia"),
 legend.text = element_text(family = "Helvetica")
 )
 party_distrubution_plot
+knitr::kable(content_type_topic_avg_table, 
+             caption = "Average Interest by Political Affiliation for Political Topics and Content Types", 
+             format = "html") |>
+  kable_styling("striped", full_width = FALSE) |>
+  scroll_box(width = "100%", height = "300px")
 ```
 This plot shows the spread of political content topics respondents consume most, and their preferred type of content to consume these topics. Overall, liberals, conservatives, and independent prefer news articles over other types of political content. Despite this, conservatives' second most preferred content type was memes, and they preferred this genre more than the other two affiliations. Liberals were the most likely to prefer opinion pieces, as this was their second most preferred type of political content, with memes being the lowest. Finally, independents content consumption patterns reflect those of conservatives, albeit to a lesser extent. Their second most preferred type of political content was opinion pieces, with their least preferred being opinion pieces. 
 

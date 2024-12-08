@@ -1870,7 +1870,129 @@ Liberal
 <span><span class='op'>)</span></span>
 <span><span class='va'>party_distrubution_plot</span></span></code></pre>
 </div>
-<p><img src="index_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
+<img src="index_files/figure-html5/unnamed-chunk-6-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>content_type_topic_avg_table</span>, </span>
+<span>             caption <span class='op'>=</span> <span class='st'>"Average Interest by Political Affiliation for Political Topics and Content Types"</span>, </span>
+<span>             format <span class='op'>=</span> <span class='st'>"html"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/kableExtra/man/kable_styling.html'>kable_styling</a></span><span class='op'>(</span><span class='st'>"striped"</span>, full_width <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/kableExtra/man/scroll_box.html'>scroll_box</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>"100%"</span>, height <span class='op'>=</span> <span class='st'>"300px"</span><span class='op'>)</span></span></code></pre>
+</div>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; overflow-x: scroll; width:100%; ">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-6">Table 2: </span>Average Interest by Political Affiliation for Political Topics and Content Types
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Political Affiliation
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+avg_enviro_interest
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+avg_healthcare_interest
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+avg_immigration_interest
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+avg_economy_interest
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+avg_opinion_pieces
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+avg_memes
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+avg_news_articles
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Conservative
+</td>
+<td style="text-align:right;">
+0.2592593
+</td>
+<td style="text-align:right;">
+0.2309368
+</td>
+<td style="text-align:right;">
+0.2668845
+</td>
+<td style="text-align:right;">
+0.2429194
+</td>
+<td style="text-align:right;">
+0.3050109
+</td>
+<td style="text-align:right;">
+0.3322440
+</td>
+<td style="text-align:right;">
+0.3627451
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Independent
+</td>
+<td style="text-align:right;">
+0.2323340
+</td>
+<td style="text-align:right;">
+0.2408994
+</td>
+<td style="text-align:right;">
+0.2665953
+</td>
+<td style="text-align:right;">
+0.2601713
+</td>
+<td style="text-align:right;">
+0.3115632
+</td>
+<td style="text-align:right;">
+0.3233405
+</td>
+<td style="text-align:right;">
+0.3650964
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Liberal
+</td>
+<td style="text-align:right;">
+0.2521097
+</td>
+<td style="text-align:right;">
+0.2383966
+</td>
+<td style="text-align:right;">
+0.2647679
+</td>
+<td style="text-align:right;">
+0.2447257
+</td>
+<td style="text-align:right;">
+0.3322785
+</td>
+<td style="text-align:right;">
+0.3259494
+</td>
+<td style="text-align:right;">
+0.3417722
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <p>This plot shows the spread of political content topics respondents consume most, and their preferred type of content to consume these topics. Overall, liberals, conservatives, and independent prefer news articles over other types of political content. Despite this, conservatives’ second most preferred content type was memes, and they preferred this genre more than the other two affiliations. Liberals were the most likely to prefer opinion pieces, as this was their second most preferred type of political content, with memes being the lowest. Finally, independents content consumption patterns reflect those of conservatives, albeit to a lesser extent. Their second most preferred type of political content was opinion pieces, with their least preferred being opinion pieces.</p>
 <p>In terms of topics, all affiliations preferred content relating to immigration the most. Of the affiliations, conservatives were the most likely to preferred content relating to immigration however, while this number was more spread across other categories for liberals and independents. Liberals and conservatives also preferred environmental content the second most, with conservatives also preferring this category the most in comparison to the other affiliations. Independents preferred economic content the second most, and were the most likely to consume this type of content across all affiliations. Both liberals and conservatives were least likely to consume content relating to healthcare, whereas independents were least likely to consume content relating to the environment.</p>
