@@ -27,7 +27,7 @@ My research analyzes the impact of media consumption and predisposed media belie
 
 # Data
 
-My data set comes from the website Kaggle under the title, “Social Media Political Content Analysis Dataset.” The date in which the survey data was collected and when it was posted to Kaggle is not available on the website. My key dependent variable, political affiliation, comes from self-reported survey data. Additionally, my independent variables, content preference (measured by types of political content and political content topics), trust in social media (measured by trust in social media), and frequency of interaction with political content (measured by social media usage frequency, and political content interaction frequency) were also measure through self-reported data on surveys.
+My data set comes from the website Kaggle under the title, “Social Media Political Content Analysis Dataset.” The date in which the survey data was collected and when it was posted to Kaggle is not available on the website. My key dependent variable, political affiliation, comes from self-reported survey data. Additionally, my independent variables, content preference (measured by types of political content and political content topics), trust in social media (measured by trust in social media), and frequency of interaction with political content (measured by social media usage frequency, and political content interaction frequency) were collected as self-reported survey data.
 
 ### Dependent Variable Summary Plot
 
