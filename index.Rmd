@@ -64,7 +64,8 @@ My primary areas of interest are how certain media consumption patterns are asso
 ## Effect of frequency of social media usage and interaction with political content on political affiliation
 
 ```{r}
-social_inter_plot <- ggplot(media_poli_ideology, aes(x = `Political Affiliation`)) + geom_bar(aes(fill = `Social Media Usage Frequency`), position = "dodge") +
+social_inter_plot <- ggplot(media_poli_ideology, aes(x = `Political Affiliation`)) + 
+  geom_bar(aes(fill = `Social Media Usage Frequency`), position = "dodge") +
   facet_wrap(~`Interactions Frequency`, scales = "free_y") + 
   labs(
     title = "Social Media Usage and Interaction Frequency by Political Affiliation",
@@ -176,7 +177,8 @@ content_type_topic_avg_table <- media_poli_ideology |>
     avg_memes = mean(`Types of Political Content` == "Memes", na.rm = TRUE),
     avg_news_articles = mean(`Types of Political Content` == "News articles", na.rm = TRUE)
   )
-knitr::kable(content_type_topic_avg_table, caption = "Average Interest by Political Affiliation for Political Topics and Content Types", format = "html") |>
+knitr::kable(content_type_topic_avg_table, caption = "Average Interest by Political Affiliation 
+for Political Topics and Content Types", format = "html") |>
   kable_styling("striped", full_width = FALSE) |>
   scroll_box(width = "100%", height = "300px")
 
