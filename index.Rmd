@@ -177,8 +177,7 @@ content_type_topic_avg_table <- media_poli_ideology |>
     avg_memes = mean(`Types of Political Content` == "Memes", na.rm = TRUE),
     avg_news_articles = mean(`Types of Political Content` == "News articles", na.rm = TRUE)
   )
-knitr::kable(content_type_topic_avg_table, caption = "Average Interest by Political Affiliation 
-for Political Topics and Content Types", format = "html") |>
+knitr::kable(content_type_topic_avg_table, format = "html") |>
   kable_styling("striped", full_width = FALSE) |>
   scroll_box(width = "100%", height = "300px")
 

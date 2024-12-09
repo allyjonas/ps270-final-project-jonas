@@ -1937,17 +1937,12 @@ AIC: 6166.152 </code></pre>
 <span>    avg_memes <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>`Types of Political Content`</span> <span class='op'>==</span> <span class='st'>"Memes"</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,</span>
 <span>    avg_news_articles <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>`Types of Political Content`</span> <span class='op'>==</span> <span class='st'>"News articles"</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
 <span>  <span class='op'>)</span></span>
-<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>content_type_topic_avg_table</span>, caption <span class='op'>=</span> <span class='st'>"Average Interest by Political Affiliation </span></span>
-<span><span class='st'>for Political Topics and Content Types"</span>, format <span class='op'>=</span> <span class='st'>"html"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>content_type_topic_avg_table</span>, format <span class='op'>=</span> <span class='st'>"html"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://rdrr.io/pkg/kableExtra/man/kable_styling.html'>kable_styling</a></span><span class='op'>(</span><span class='st'>"striped"</span>, full_width <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://rdrr.io/pkg/kableExtra/man/scroll_box.html'>scroll_box</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>"100%"</span>, height <span class='op'>=</span> <span class='st'>"300px"</span><span class='op'>)</span></span></code></pre>
 </div>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; overflow-x: scroll; width:100%; ">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-<span id="tab:unnamed-chunk-6">Table 2: </span>Average Interest by Political Affiliation
-for Political Topics and Content Types
-</caption>
 <thead>
 <tr>
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
